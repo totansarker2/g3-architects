@@ -15,7 +15,6 @@
     --p-font: 16px;
 
     --global-width: 75%;
-    ;
     --global-gap: 120px;
     --global-radius: 8px;
 
@@ -38,6 +37,7 @@
     -o-border-radius: var(--global-radius);
     border: none;
     width: auto;
+    width: fit-content;
 }
 
 .heading-1 {
@@ -165,6 +165,74 @@ nav ul li a {
     text-align: left;
 }
 
+/* service-section */
+.service-section {
+    margin-top: 90px;
+    width: var(--global-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.service-section .s-warpper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-section .s-warpper .heading-2, .s-warpper .description {
+    width: 80%;
+    text-align: left;
+}
+
+.service-section .heading-3 {
+    text-align: left;
+}
+
+.service-section .s-feature {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.service-section .description {
+    width: 100%;
+}
+
+.service-section .s-img-container img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.service-section .s-img-container .experience {
+    border-radius: 8px;
+    background: #FF900E;
+    color: #FFF;
+    padding: 50px 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 40px;
+
+    position: relative;
+    bottom: 10%;
+    left: -15%;
+
+}
+
+.service-section .s-img-container .experience .big-txt {
+    font-size: 65px;
+    font-weight: 700;
+}
+
 /* fact-section */
 .fact-section {
     margin-top: calc(var(--global-gap) - 25px);
@@ -225,7 +293,7 @@ nav ul li a {
     font-weight: 600;
 }
 
-.sponspors-section{
+.sponspors-section {
     width: var(--global-width);
     margin-top: var(--global-gap);
     display: flex;
@@ -234,11 +302,11 @@ nav ul li a {
     gap: 20px;
 }
 
-.sponspors-section .description{
+.sponspors-section .description {
     width: 40%;
 }
 
-.sponspors-section .sponspors-logo{
+.sponspors-section .sponspors-logo {
     margin-top: 30px;
     width: 100%;
     display: flex;
@@ -247,7 +315,7 @@ nav ul li a {
     gap: 30px;
 }
 
-footer .f-description{
+footer .f-description {
     margin: var(--global-gap) 0;
     width: var(--global-width);
     text-align: center;
@@ -262,6 +330,11 @@ footer .f-description{
 
 /* mobile devices */
 @media screen and (max-width: 425px) {
+    :root {
+        --global-width: 100%;
+        --global-gap: 50px;
+    }
+
     header nav, nav ul {
         width: 100%;
         flex-direction: column;
@@ -277,7 +350,6 @@ footer .f-description{
     }
 
     .banner-section {
-        width: 100%;
         padding: 0 1.8em;
     }
 
@@ -290,7 +362,6 @@ footer .f-description{
     }
 
     .feature-section {
-        width: 100%;
         grid-template-columns: 1fr;
         padding: 1.8em;
         place-items: center;
@@ -305,8 +376,39 @@ footer .f-description{
         width: 100%;
     }
 
-    .fact-section {
+
+    /* service-section */
+    .service-section {
+        padding: 1.8em;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .service-section .s-warpper {
         width: 100%;
+    }
+
+    .service-section .s-warpper .heading-2, .s-warpper .description {
+        width: 100%;
+        text-align: left;
+    }
+
+    .service-section .s-img-container .experience {
+        padding: 40px 30px;
+        width: 70%;
+        bottom: 70px;
+        left:1em;
+    }
+
+    .service-section .s-img-container .experience .big-txt {
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+
+
+
+    .fact-section {
         padding: 1.8em;
     }
 
@@ -335,23 +437,31 @@ footer .f-description{
         min-height: 0px;
     }
 
-    .sponspors-section{
-        width: 100%;
+    .sponspors-section {
         padding: 1.8em;
     }
 
-    .sponspors-section .description{
+    .sponspors-section .description {
         width: 100%;
     }
 
-    .sponspors-section .sponspors-logo{
+    .sponspors-section .sponspors-logo {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    footer .f-description {
+        width: 100%;
     }
 }
 
 /* tablet or medium devices */
 @media screen and (min-width:425.1px) and (max-width: 960px) {
+    :root {
+        --global-width: 85%;
+        --global-gap: 100px;
+    }
+
     nav {
         flex-direction: column;
         gap: 30px;
@@ -381,6 +491,36 @@ footer .f-description{
         width: 100%;
     }
 
+
+    /* service-section */
+    .service-section {
+        padding: 1.8em;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .service-section .s-warpper {
+        width: 100%;
+    }
+
+    .service-section .s-warpper .heading-2, .s-warpper .description {
+        width: 100%;
+        text-align: left;
+    }
+
+    .service-section .s-img-container .experience {
+        padding: 40px 30px;
+        width: 70%;
+        bottom: 70px;
+        left:1em;
+    }
+
+    .service-section .s-img-container .experience .big-txt {
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+
     .fact-section .f-wrapper {
         max-width: 70%;
     }
@@ -401,11 +541,11 @@ footer .f-description{
         min-height: 0px;
     }
 
-    .sponspors-section .description{
+    .sponspors-section .description {
         width: 80%;
     }
 
-    .sponspors-section .sponspors-logo{
+    .sponspors-section .sponspors-logo {
         justify-content: center;
     }
 }
