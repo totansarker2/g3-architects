@@ -1,9 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
 
+:root {
+    --big-1: 64px;
+    --big-2: 45px;
+    --small: 20px;
+    --menu: 18px;
+    --p-font: 16px;
+
+    --global-width: 75%;
+    ;
+    --global-gap: 100px;
+    ---global-radius: 8px;
+
+    --background: rgba(255, 144, 14, 0.10);
+    --dark-1: #131313;
+    --dark-2: #424242;
+    --dark-3: #727272;
+}
+
+.btn-primary {
+    color: #FFF;
+    background: #FF900E;
+    font-size: var(--small);
+    font-weight: 600;
+    padding: 20px 20px;
+    border-radius: var(---global-radius);
+    -webkit-border-radius: var(---global-radius);
+    -moz-border-radius: var(---global-radius);
+    -ms-border-radius: var(---global-radius);
+    -o-border-radius: var(---global-radius);
+    border: none;
+}
+
+.heading-1 {
+    color: var(--dark-1);
+    text-align: center;
+    font-size: var(--big-1);
+    font-weight: 700;
+}
+
+.heading-2 {
+    color: var(--dark-1);
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.heading-3 {
+    color: var(--dark-1);
+    font-size: var(--small);
+    font-weight: 600;
+}
+
+.description {
+    color: var(--dark-3);
+    text-align: center;
+    font-size: var(--p-font);
+    font-weight: 400;
+    /* line-height: 26px; */
+}
+
+.primary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: rgba(255, 144, 14, 0.10);
+}
+
+header nav {
+    width: var(--global-width);
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: var(--menu);
+    color: var(--dark-2);
+    font-weight: 500;
+}
+
+.banner-section {
+    width: var(--global-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px
+}
+
+.banner-section h1, .banner-section p {
+    width: 60%;
+}
+
+.banner-section img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+    header nav, nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    .banner-section {
+        width: 100%;
+    }
+}
