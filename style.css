@@ -225,6 +225,41 @@ nav ul li a {
     font-weight: 600;
 }
 
+.sponspors-section{
+    width: var(--global-width);
+    margin-top: var(--global-gap);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sponspors-section .description{
+    width: 40%;
+}
+
+.sponspors-section .sponspors-logo{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer .f-description{
+    margin: var(--global-gap) 0;
+    width: var(--global-width);
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 144, 14, 0.10);
+
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark-2);
+    line-height: 30px;
+}
+
 /* mobile devices */
 @media screen and (max-width: 425px) {
     header nav, nav ul {
@@ -298,7 +333,20 @@ nav ul li a {
 
         min-width: 0px;
         min-height: 0px;
+    }
 
+    .sponspors-section{
+        width: 100%;
+        padding: 1.8em;
+    }
+
+    .sponspors-section .description{
+        width: 100%;
+    }
+
+    .sponspors-section .sponspors-logo{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -347,10 +395,17 @@ nav ul li a {
 
     .f-card-container li {
         height: 250px;
-        width: 250px;
+        max-width: 250px;
 
         min-width: 0px;
         min-height: 0px;
+    }
 
+    .sponspors-section .description{
+        width: 80%;
+    }
+
+    .sponspors-section .sponspors-logo{
+        justify-content: center;
     }
 }
