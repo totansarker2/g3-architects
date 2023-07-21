@@ -17,7 +17,7 @@
     --global-width: 75%;
     ;
     --global-gap: 100px;
-    ---global-radius: 8px;
+    --global-radius: 8px;
 
     --background: rgba(255, 144, 14, 0.10);
     --dark-1: #131313;
@@ -31,12 +31,13 @@
     font-size: var(--small);
     font-weight: 600;
     padding: 20px 20px;
-    border-radius: var(---global-radius);
-    -webkit-border-radius: var(---global-radius);
-    -moz-border-radius: var(---global-radius);
-    -ms-border-radius: var(---global-radius);
-    -o-border-radius: var(---global-radius);
+    border-radius: var(--global-radius);
+    -webkit-border-radius: var(--global-radius);
+    -moz-border-radius: var(--global-radius);
+    -ms-border-radius: var(--global-radius);
+    -o-border-radius: var(--global-radius);
     border: none;
+    width: auto;
 }
 
 .heading-1 {
@@ -44,18 +45,21 @@
     text-align: center;
     font-size: var(--big-1);
     font-weight: 700;
+    text-align: center;
 }
 
 .heading-2 {
     color: var(--dark-1);
     font-size: 45px;
     font-weight: 700;
+    text-align: center;
 }
 
 .heading-3 {
     color: var(--dark-1);
     font-size: var(--small);
     font-weight: 600;
+    text-align: center;
 }
 
 .description {
@@ -63,7 +67,7 @@
     text-align: center;
     font-size: var(--p-font);
     font-weight: 400;
-    /* line-height: 26px; */
+    line-height: 26px;
 }
 
 .primary-container {
@@ -113,6 +117,55 @@ nav ul li a {
 .banner-section img {
     max-width: 100%;
 }
+
+.feature-section{
+    margin-top: var(--global-gap);
+    width: var(--global-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-section .feature-info{
+    margin: auto 0;
+}
+
+.feature-section .feature-info .wrapper{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ }
+
+.feature-section .img-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 20px;
+}
+
+.img-container img{
+    max-width: 100%;
+}
+
+.feature-section .heading-2{
+    text-align: left;
+}
+
+.feature-section .heading-2 .quick-list{
+    color: var(--dark-3);
+    font-weight: 500;
+}
+
+.feature-section .heading-2 .features{
+    color: #FF900E;
+    
+}
+
+.feature-section .description{
+    text-align: left;
+}
+
+
 
 /* mobile devices */
 @media screen and (max-width: 425px) {
