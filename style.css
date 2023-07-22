@@ -203,6 +203,12 @@ nav ul li a {
     width: 100%;
 }
 
+.service-section .s-img-container {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+}
+
 .service-section .s-img-container img {
     display: block;
     max-height: 100%;
@@ -213,23 +219,23 @@ nav ul li a {
     border-radius: 8px;
     background: #FF900E;
     color: #FFF;
-    padding: 50px 40px;
+    padding: 40px 20px;
     width: fit-content;
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 10px;
     font-size: 25px;
     font-weight: 500;
     line-height: 40px;
 
-    position: relative;
-    bottom: 10%;
-    left: -15%;
-
+    position: absolute;
+    left: -18%; /*because s-wrapper is 80%*/
+    bottom: -10%;
 }
 
 .service-section .s-img-container .experience .big-txt {
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 700;
 }
 
@@ -394,18 +400,22 @@ footer .f-description {
     }
 
     .service-section .s-img-container .experience {
-        padding: 40px 30px;
-        width: 70%;
-        bottom: 70px;
-        left:1em;
+        width: fit-content;
+        position: static;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        padding: 20px;
+        gap: 5px;
     }
 
     .service-section .s-img-container .experience .big-txt {
-        font-size: 55px;
+        font-size: 45px;
         font-weight: 700;
     }
-
-
 
 
     .fact-section {
@@ -491,6 +501,20 @@ footer .f-description {
         width: 100%;
     }
 
+    .service-section .s-img-container {
+        height: 90vh;
+    }
+
+    .service-section .s-img-container .experience {
+        position: static;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        width: fit-content !important;
+    }
 
     /* service-section */
     .service-section {
@@ -512,7 +536,7 @@ footer .f-description {
         padding: 40px 30px;
         width: 70%;
         bottom: 70px;
-        left:1em;
+        left: 1em;
     }
 
     .service-section .s-img-container .experience .big-txt {
